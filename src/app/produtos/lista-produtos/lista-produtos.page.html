@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content padding>
+<ion-content padding>
    <ion-list>
     <ion-item>
 
@@ -28,7 +28,7 @@
         <h1>{{ produto.nome }}</h1>
         <h2>{{ produto.categoriaNome }}</h2>
         <pre text-wrap>{{ produto.descricao }}</pre>
-        <span>{{ produto.preco | currency:'BRL' }}</span>
+         <!-- <span>{{ produto.preco | currency:'BRL' }}</span> -->
         <app-valor [valor]="produto.preco"></app-valor>
       </ion-label>
     </ion-item>
@@ -38,4 +38,4 @@
       <ion-icon name="cart"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-</ion-content> -->
+</ion-content>

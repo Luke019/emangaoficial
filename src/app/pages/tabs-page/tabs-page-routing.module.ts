@@ -36,11 +36,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'usuarios',
+        path: 'about',
         children: [
           {
             path: '',
-            loadChildren: '../../usuarios/perfil/perfil.module#PerfilPageModule'
+            loadChildren: () => import('../about/about.module').then(m => m.AboutModule)
           }
         ]
       },
