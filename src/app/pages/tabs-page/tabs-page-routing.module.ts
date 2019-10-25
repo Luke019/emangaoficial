@@ -9,15 +9,6 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'pedidos',
-        children: [
-          {
-            path: '',
-            loadChildren: '../../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
-          }
-        ]
-      },
-      {
         path: 'produtos',
         children: [
           {
@@ -26,6 +17,28 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'pedidos',
+        children: [
+          {
+            path: 'carrinho/novo-item/:key',
+            loadChildren: '../../pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule'
+          },
+          {
+            path: 'carrinho',
+            loadChildren: '../../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
+          }
+        ]
+      },
+      // {
+      //   path: 'pedidos',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: '../../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
+      //     }
+      //   ]
+      // },
       {
         path: 'map',
         children: [
